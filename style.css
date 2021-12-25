@@ -1,3 +1,9 @@
+/* Palette from https://colorhunt.co/palette/125c133e7c17f4a442e8e1d9
+dark green rgb(18, 92, 19)
+light green rgb(62, 124, 23)
+light orange rgb(244, 164, 66)
+grey rgb(232, 225, 217) */
+
 body {
     display: flex;
     flex-flow: column nowrap;
@@ -5,7 +11,7 @@ body {
 
 .upper{
     display: flex;
-    background-color: rgb(0, 68, 28);
+    background-color: rgb(18, 92, 19);
     color:white;
 }
 
@@ -19,7 +25,9 @@ body {
     flex-flow: row nowrap;
     height: 100px;
     align-items: center;
-
+    position: sticky;
+    top: 1px;
+    background-color: rgb(18, 92, 19);
 }
 
 .upper-center {
@@ -29,27 +37,25 @@ body {
 }
 
 .logo {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
     border: 4px;
     border-style: solid;
     border-radius: 50%;
+    gap: 10px;
 }
-div{
-    border: 2px;
+/*div{
+   border: 2px; 
     border-style: solid;
-}
+}*/
 .header img{
-    max-height: 80px;
+    max-height: 60px;
     object-fit: cover;
     border-radius: 50%;
-}
-.intro img{
-    max-width: 400px;
 }
 ul {
     list-style: none;
@@ -60,4 +66,77 @@ ul {
     text-decoration: none;
     color: white;
     font-size: 24px;
+}
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro div{
+    flex: 1 1 0;
+}
+.left-intro{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+}
+.left-intro div{
+    flex: 0;
+}
+.subtitle{
+    font-size: 48px;
+    font-weight: bold;
+}
+.description{
+    font-size: 18px;
+}
+
+button{
+    flex: 0;
+    font-size: 18px;
+    font-weight:bolder;
+    background-color: rgb(244, 164, 66);
+    border-radius : 10px;
+    padding: 5 px;
+}
+
+.intro img{
+    width:100%;
+    height:100%;
+}
+
+.portfolio-stage{
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+}
+
+.portfolio-container {
+    display:flex;
+    flex-flow: row wrap;
+}
+.portfolio{
+    display:flex;
+    flex-flow:column;
+    text-align: center;
+    gap: 10px;
+}
+.subimage{
+    width:206px;
+}
+
+.portlogo{
+    width:200px;
+    height:200px;
+}
+
+.portfolio img{
+    width:100%;
+    height:100%;
+    border-radius: 20px;
+    border-style: solid;
+    border-color:rgb(244, 164, 66)
 }
