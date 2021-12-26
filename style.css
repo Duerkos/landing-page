@@ -1,10 +1,15 @@
-/* Palette from https://colorhunt.co/palette/125c133e7c17f4a442e8e1d9
-dark green rgb(18, 92, 19)
-light green rgb(62, 124, 23)
-light orange rgb(244, 164, 66)
-grey rgb(232, 225, 217) */
+/* Palette from https://colorhunt.co/palette/125c133e7c17f4a442e8e1d9 */
+
+
+:root {
+    --header-bg: rgb(6, 70, 53);
+    --light-bg: rgb(81, 146, 89);
+    --colourful-color: rgb(240, 187, 98);
+    --lightest-bg: rgb(244, 238, 169);
+}
 
 body {
+    margin: 0px;
     display: flex;
     flex-flow: column nowrap;
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
@@ -12,12 +17,13 @@ body {
 
 .upper{
     display: flex;
-    background-color: rgb(18, 92, 19);
+    background-color: var(--header-bg);
     color:white;
 }
 
 .spacer{
-    width: 200px;
+    min-width: 10vw;
+    flex: initial;
 }
 
 .header {
@@ -27,8 +33,8 @@ body {
     height: 100px;
     align-items: center;
     position: sticky;
-    top: 1px;
-    background-color: rgb(18, 92, 19);
+    top: 0px;
+    background-color: var(--header-bg);
 }
 
 .upper-center {
@@ -72,6 +78,8 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
 }
 .intro div{
     flex: 1 1 0;
@@ -99,9 +107,10 @@ button{
     flex: 0;
     font-size: 18px;
     font-weight:bolder;
-    background-color: rgb(244, 164, 66);
+    background-color: var(--colourful-color);
     border-radius : 10px;
     padding: 5 px;
+    cursor: pointer;
 }
 
 .intro img{
@@ -113,7 +122,7 @@ button{
     display:flex;
     flex-flow:column nowrap;
     align-items:center;
-    background-color: rgb(232, 225, 217)
+    background-color: var(--lightest-bg);
 }
 
 .portfolio-header{
@@ -150,11 +159,16 @@ button{
     object-fit: cover;
     border-radius: 20px;
     border-style: solid;
-    border-color:rgb(244, 164, 66)
+    border-color: var(--colourful-color);
 }
+
+.pointer {
+    cursor: pointer;
+}
+
 .quote-container{
     display:flex;
-    background-color: rgb(62, 124, 23);
+    background-color: var(--light-bg);
     color: black;
     flex-direction: column;
     padding: 20px;
@@ -171,4 +185,37 @@ button{
     font-size: 30px;
     font-weight: bolder;
     text-align:right;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+    background-color: var(--lightest-bg);
+}
+
+.contact-container .portfolio-stage {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colourful-color);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex: 1;
+    padding: 60px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.contact-header {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: var(--header-bg);
+    color: white;
+    text-align: center;
+    padding: 20px;
 }

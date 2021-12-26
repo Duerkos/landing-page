@@ -8,19 +8,19 @@
     <title>Duerkos Portfolio</title>
 </head>
 <body>
-    <div class="upper">
+    <div class="upper" id="top">
         <div class="spacer"></div>
         <div class="upper-center">
             <div class="header">
                 <div class="logo">
                     <img src="./img/duerkos.png" alt="Artistic photo of Duerkos">
-                    <div>Duerkos</div>
+                    <div><a href="#top">Duerkos</a></div>
                 </div>
                 <ul class="rightlinks">
                     <!-- evitar que se colapse -->
-                    <li><a href="">Porfolio</a></li>
-                    <li><a href="">Description</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#portfolio">Porfolio</a></li>
+                    <li><a href="#description">Description</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="intro">
@@ -31,43 +31,58 @@
                         data visualization. I love videogames so some of the 
                         projects are oriented to that field. This is still a 
                         work in progress.</div>
-                    <button>My Linkedin</button>
+                    <button onclick="document.location='https://github.com/Duerkos/'">My Github
+                    </button>
                 </div>
                 <div>
-                    <img id="introimage" src="./img/matrix.jpg" alt="">
+                    <img id="introimage" src="./img/programming.jpg" alt="">
                 </div>
             </div>
         </div>
         <div class="spacer"></div>
     </div>
-    <div class="portfolio-stage">
+    <div class="portfolio-stage" id="portfolio">
         <div class="portfolio-header">My Projects</div>
         <div class="portfolio-container">
             <div class="portfolio">
-                <div class="portlogo"><img src="./img/landing-page.png" alt="Landing Page"></div>
+                <div class="portlogo pointer"><img onclick="document.location='https://github.com/Duerkos/landing-page'" src="./img/landing-page.png" alt="Landing Page"></div>
                 <div class="subimage">Recursion! My last project is actually this website. Pure HTML/CSS (using flex)</div>
             </div>
             <div class="portfolio">
                 <div class="portlogo"><img src="./img/screenshot.png" alt=""></div>
-                <div class="subimage">A small game using gamemaker and python for android a few years ago. Its main attractive was the lighting engine.</div>
+                <div class="subimage">A small simple game with an ingenous lighting engine. Gamemaker, python, android.</div>
             </div>
             <div class="portfolio">
                 <div class="portlogo"><img src="./img/hand.jpg" alt="Digital hand going out of a laptop"></div>
-                <div class="subimage">At work, I've integrated a CRM work package dealer that we use everyday, using Excel, MS CRM, Outlook with VBA.</div>
+                <div class="subimage">I've integrated a CRM work package dealer that we use everyday. Excel, CRM and Outlook with VBA.</div>
             </div>
             <div class="portfolio">
                 <div class="portlogo"><img src="./img/cockpit.jpg" alt=""></div>
-                <div class="subimage">Extracting information from a raw aircraft file and enriching it with other data. Using python / pandas / matplotlib.</div>
+                <div class="subimage">A tool extracting raw aircraft files and enriching it with databases. Python, pandas and matplotlib.</div>
             </div>
         </div>
     </div>
-    <div class="quote-container">
+    <div class="quote-container" id="description">
         <div>
             <div class="quote">This takes up a lot of our time and brings drama to the team. Does anybody know if this kind of thing can be automated?</div>
             <div class="quoter">CRM dealer was born.</div>
         </div>
     </div>
-    <div class="contact-container"></div>
-    <div class="footer">Website designed by Vicente Arce David under The Odin Project Guidelines</div>
+    <div class="contact-container" id="contact">
+        <div class="spacer"></div>
+        <div class="portfolio-stage">
+            <div class="contact-text">
+                <div class="contact-header">
+                    Interested? Contact me!
+                </div>
+                <div class="contact-sub">
+                    Check my Linkedin profile and get in touch!
+                </div>
+            </div>
+            <button onclick="document.location='https://www.linkedin.com/in/vicente-arce-david'">Linkedin</button>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <div class="footer">Website designed by Vicente Arce David -- The Odin Project</div>
 </body>
 </html>
