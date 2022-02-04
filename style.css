@@ -22,7 +22,7 @@ body {
 }
 
 .spacer{
-    min-width: 10vw;
+    min-width: 3vw;
     flex: initial;
 }
 
@@ -44,45 +44,45 @@ body {
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
+    width: 10vw;
+    height: 10vw;
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: normal;
     font-weight: bold;
     border: 4px;
     border-style: solid;
     border-radius: 50%;
-    gap: 10px;
+    gap: 3vw;
 }
 /*div{
    border: 2px; 
     border-style: solid;
 }*/
 .header img{
-    max-height: 60px;
+    max-height: 10vw;
     object-fit: cover;
     border-radius: 50%;
 }
 ul {
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 2vw;
 }
 .header a{
     text-decoration: none;
     color: white;
-    font-size: 24px;
+    font-size: normal;
 }
 .intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    gap: 20px;
+    gap: 3vw;
 }
 .intro div{
-    flex: 1 1 0;
+    flex: 1 1 1;
 }
 .left-intro{
     display: flex;
@@ -96,11 +96,11 @@ ul {
     flex: 0;
 }
 .subtitle{
-    font-size: 48px;
+    font-size: x-large;
     font-weight: bold;
 }
 .description{
-    font-size: 18px;
+    font-size: normal;
 }
 
 button{
@@ -114,8 +114,10 @@ button{
 }
 
 .intro img{
-    width:100%;
-    height:100%;
+    border-radius:10px;
+    border-style: solid;
+    border-color: var(--colourful-color);
+    display: none;
 }
 
 .portfolio-stage{
@@ -134,7 +136,8 @@ button{
 
 .portfolio-container {
     display:flex;
-    flex-flow: row-reverse wrap;
+    flex-flow: row wrap;
+    justify-content: center;
     gap: 10px;
     margin-bottom: 30px;
 }
@@ -145,17 +148,18 @@ button{
     gap: 10px;
 }
 .subimage{
-    width:206px;
+    width:40vw;
+    font-size: small;
 }
 
 .portlogo{
-    width:200px;
-    height:200px;
+    width:40vw;
+    height:40vw;
 }
 
 .portfolio img{
-    width: 100%;
-    height:100%;
+    width: 40vw;
+    height:40vw;
     object-fit: cover;
     border-radius: 20px;
     border-style: solid;
@@ -176,13 +180,13 @@ button{
 }
 
 .quote{
-    font-size: 36px;
+    font-size: large;
     font-style: italic;
     max-width: 800px;
 }
 
 .quoter{
-    font-size: 30px;
+    font-size: x-large;
     font-weight: bolder;
     text-align:right;
 }
@@ -200,16 +204,16 @@ button{
     align-items: center;
     justify-content: center;
     background-color: var(--colourful-color);
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
     flex: 1;
-    padding: 60px;
-    gap: 20px;
+    padding: 10vw;
+    gap: 5vw;
     border-radius: 10px;
 }
 
 .contact-header {
-    font-size: 24px;
+    font-size: large;
     font-weight: bold;
 }
 
@@ -218,4 +222,87 @@ button{
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+@media only screen and (orientation: landscape) {
+    .logo {
+        width: 5vh;
+        height: 5vh;
+        gap: 2vh;
+        font-size: x-large;
+    }
+    .header img{
+        max-height: 5vh;
+    }
+    ul {
+        gap: 2vh;
+        font-size: x-large;
+    }
+    .intro {
+        gap: 3vh;
+    }
+    .intro img{
+        display:flex;
+        width: 40vw;
+    }
+    .subtitle{
+        font-size: x-large;
+        font-weight: bold;
+    }
+    .description{
+        font-size: larger;
+    }
+    .subimage{
+        width:15vw;
+        font-size:medium;
+    }
+    .portfolio-container{
+        gap: 2vw;
+    }
+    
+    .portlogo{
+        width:15vw;
+        height:15vw;
+    }
+    
+    .portfolio img{
+        width: 15vw;
+        height:15vw;
+    }
+    .quote{
+        font-size: 36px;
+    }
+    
+    .quoter{
+        font-size: 40px;
+    }
+    
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex: 1;
+        background-color: var(--lightest-bg);
+    }
+    
+    .contact-container .portfolio-stage {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        flex: 1;
+        padding: 2vw;
+        gap: 1vw;
+        border-radius: 10px;
+    }
+    
+    .contact-header {
+        font-size: x-large;
+        font-weight: bold;
+    }
+    
+    .footer {
+        background-color: var(--header-bg);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
 }
